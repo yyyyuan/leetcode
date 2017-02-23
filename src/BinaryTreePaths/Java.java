@@ -14,8 +14,10 @@ public class Solution {
         
         String path = "";
         
-        search(result, path, root);
-        
+        if (root.left == null && root.right == null) result.add(path+root.val);
+        if (root.left != null) search(result, path + root.val, root.left);
+        if (root.right != null) search(result, path + root.val, root.right);
+
         return result;
     }
     
@@ -25,14 +27,8 @@ public class Solution {
             return;
         }
         
-        if (path == "") {
-            if (root.right == null || root.left != null) search(result, path + root.val, root.left);
-            if (root.right != null || root.left == null) search(result, path + root.val, root.right);  
-        } 
-        else {
-            if (root.right == null || root.left != null) search(result, path + "->" + root.val, root.left);
-            if (root.right != null || root.left == null) search(result, path + "->" + root.val, root.right);            
-        }
+        if (root.right == null || root.left != null) search(result, path + "->" + root.val, root.left);
+        if (root.right != null || root.left == null) search(result, path + "->" + root.val, root.right);            
         
 
         
