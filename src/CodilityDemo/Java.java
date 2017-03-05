@@ -8,8 +8,8 @@ class Solution {
     public int solution(int[] A) {
         // write your code in Java SE 8
         if (A.length == 0) return -1;
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-        int sum = 0;
+        HashMap<Integer, Long> map = new HashMap<Integer, Long>();
+        long sum = 0;
         
         for (int i=0; i<A.length; i++) {
             sum += A[i];
