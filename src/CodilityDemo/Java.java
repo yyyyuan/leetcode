@@ -7,8 +7,7 @@ import java.util.*;
 class Solution {
     public int solution(int[] A) {
         // write your code in Java SE 8
-        if (A.length == 0) return 0;
-        int result = 0;
+        if (A.length == 0) return -1;
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int sum = 0;
         
@@ -17,12 +16,12 @@ class Solution {
             map.put(i, sum);
         }
         
-        if (map.get(A.length-1) - map.get(0) == 0) result++;
+        if (map.get(A.length-1) - map.get(0) == 0) return 0;
         
         for (int i=1; i<A.length; i++) {
-            if (map.get(i-1) == map.get(A.length-1) - map.get(i)) result++;    
+            if (map.get(i-1) == map.get(A.length-1) - map.get(i)) return i;    
         }
         
-        return result;
+        return -1;
     }
 }
