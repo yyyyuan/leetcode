@@ -1,3 +1,4 @@
+// This is the problem where numbers can be reused.
 public class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();
