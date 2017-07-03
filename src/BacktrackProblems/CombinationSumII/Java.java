@@ -13,9 +13,9 @@ public class Solution {
         else if (remain == 0) list.add(new ArrayList<>(tempList));
         else {
             for (int i=start; i<candidates.length; i++) {
-                if (i>start && candidates[i] == candidates[i-1]) continue;
+                if (i>start && candidates[i] == candidates[i-1]) continue; // There will skip the same element.
                 tempList.add(candidates[i]);
-                backtrack(list, tempList, candidates, remain - candidates[i], i+1);
+                backtrack(list, tempList, candidates, remain - candidates[i], i+1); // Use i+1 instead of i
                 tempList.remove(tempList.size() - 1);
             }
         }
