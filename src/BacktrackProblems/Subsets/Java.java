@@ -1,7 +1,7 @@
 public class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        Arrays.sort(nums);
+        Arrays.sort(nums);  // Not necessary actually
         List<Integer> temp = new ArrayList<Integer>();
         backTrack(result, temp, nums, 0);
         return result;
