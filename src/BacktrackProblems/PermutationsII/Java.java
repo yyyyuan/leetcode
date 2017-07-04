@@ -11,7 +11,7 @@ public class Solution {
         if (tempList.size() == nums.length) list.add(new ArrayList<>(tempList));
         else {
             for (int i=0; i<nums.length; i++) {
-                if (check[i] == true || i > 0 && nums[i] == nums[i-1] && !check[i-1]) continue;
+                if (check[i] == true || i > 0 && nums[i] == nums[i-1] && !check[i-1]) continue; // This line of code handles the duplicate elements.
                 tempList.add(nums[i]);
                 check[i] = true;
                 backtrack(list, tempList, nums, check);
