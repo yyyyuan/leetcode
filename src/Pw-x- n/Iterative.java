@@ -6,6 +6,8 @@ public class Solution {
         double result = 1;
         while (i > 0) {
             if (i % 2 != 0) result *= x;
+//          if ((i & 1) == 1) result *= x;      // This can also work using bit operations.
+
             x *= x;
             i >>= 1;
         }
