@@ -1,7 +1,7 @@
 public class Solution {
     public double myPow(double x, int n) {
         if (n == 0) return 1;
-        long i = Math.abs((long)n);
+        long i = Math.abs((long)n);     // Use long to handle the special case of Integer.MIN_VALUE
         
         double result = 1;
         while (i > 0) {
