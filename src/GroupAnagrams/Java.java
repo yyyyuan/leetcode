@@ -3,7 +3,7 @@ public class Solution {
         List<List<String>> result = new ArrayList<List<String>>();
         if (strs.length == 0) return result;
         HashMap<String, List<String>> map = new HashMap<String, List<String>>();
-        Arrays.sort(strs);
+//        Arrays.sort(strs);
         
         for (String s : strs) {
             char[] ca = s.toCharArray();
