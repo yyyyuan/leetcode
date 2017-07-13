@@ -10,6 +10,9 @@ public class Solution {
         if (r == board.length) {
             List<String> list = new ArrayList<>();
             for (String s : board) list.add(s);
+           
+            // List<String> list = new ArrayList<>(Arrays.asList(board));
+
             result.add(list);
         }
         else {
