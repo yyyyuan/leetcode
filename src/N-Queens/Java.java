@@ -8,7 +8,8 @@ public class Solution {
     
     private void helper(int r, boolean[] cols, boolean[] d1, boolean[] d2, String[] board, List<List<String>> result)     {
         if (r == board.length) {
-            List<String> list = Arrays.asList(board);
+            List<String> list = new ArrayList<>();
+            for (String s : board) list.add(s);
             result.add(list);
         }
         else {
