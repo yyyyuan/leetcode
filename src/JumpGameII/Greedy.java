@@ -9,6 +9,9 @@ public class Solution {
             }
         }
         
+        if (currEnd < nums.length - 1) return Integer.MAX_VALUE;    // This could handle the case where it can't jump to the last index.
+
+        
         return jumps;
     }
 }
