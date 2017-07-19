@@ -25,7 +25,7 @@ public class Solution {
         
         int index = size - k % size;
         
-        if (index == size) return head;
+        if (index == size) return head;   // This line of code can be added or not, it will not influence the result.
         else {
             
             while (index != 0) {
