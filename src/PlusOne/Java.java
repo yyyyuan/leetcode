@@ -10,7 +10,7 @@ public class Solution {
             digits[i] = 0;
         }
         
-        int newNumber = new int[n + 1];
+        int[] newNumber = new int[n + 1];
         newNumber[0] = 1;
         return newNumber;
     }
