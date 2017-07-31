@@ -16,7 +16,7 @@ public class Solution {
         for (int i = 0; i < m - 1; i++) pre = pre.next;
         
         ListNode start = pre.next;
-        ListNode then = pre.next;
+        ListNode then = start.next;
         
         for (int i = 0; i < n - m; i++) {
             start.next = then.next;
