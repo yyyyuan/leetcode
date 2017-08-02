@@ -9,18 +9,23 @@
  */
 public class Solution {
     public boolean isValidBST(TreeNode root) {
-        if (root == null) return true;
         Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode p = root;
         TreeNode pre = null;
-        while (root != null || !stack.isEmpty()) {
-            while (root != null) {
-                stack.push(root);
-                root = root.left;
+        
+        while (p != null || !stack.isEmpty()) {
+            if (p != null) {
+                stack.push(p);
+                p = p.left;
             }
-            root = stack.pop();
-            if (pre != null && pre.val >= root.val) return false;
-            pre = root;
-            root = root.right;
+            else {
+                p = stack.pop();
+                if (pre != null && pre.val >= p.val) {
+                    return false;
+                }
+                pre = p;
+                p = p.right;
+            }
         }
         
         return true;
