@@ -26,7 +26,7 @@ public class Solution {
                     cols[c] = true;
                     d1[id1] = true;
                     d2[id2] = true;
-                    helper(r + 1, cols, d1, d2, board, result);
+                    helper(r + 1, cols, d1, d2, board, result);     // We dont need to remove string because we can overwrite in the array directly.
                     cols[c] = false;
                     d1[id1] = false;
                     d2[id2] = false;
