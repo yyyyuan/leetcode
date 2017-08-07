@@ -5,13 +5,13 @@ public class Solution {
         
         for (int i = 0; i < m; i++) {
             check(board, i, 0, m, n);
-            if (n > 1)
+            if (n > 1)      // Avoid checking the col twice if there is only one column
                 check(board, i, n - 1, m, n);
         }
         
-        for (int j = 1; j + 1 < n; j++) {
+        for (int j = 1; j + 1 < n; j++) {   // Here use j = 1 and j + 1 < 1 to avoid checking corner twice, these can increase the speed.
             check(board, 0, j, m, n);
-            if (m > 1)
+            if (m > 1)      // Avoid checking the row twice if there is only one row
                 check(board, m - 1, j, m, n);
         }
         
