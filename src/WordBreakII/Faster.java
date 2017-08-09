@@ -13,6 +13,8 @@ public class Solution {
             words.add("");
             return words;
         }
+        
+        // If the string is not breakable, this addSpaces will return empty list, this can avoid TLE problem.
         for(int i = start + 1; i <= max + start && i <= s.length(); i++){
             String temp = s.substring(start, i);
             if(wordDict.contains(temp)){
