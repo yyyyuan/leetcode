@@ -10,7 +10,7 @@ public class Solution {
         while (remain >= 0) {
             int index = remain % 26;
             result.insert(0, dict[index]);
-            remain = (remain - index) / 26 - 1;
+            remain = remain / 26 - 1;
         }
         return result.toString();
     }
