@@ -3,8 +3,7 @@ public class Solution {
         return majority(nums, 0, nums.length - 1);
     }
     
-    private int majority(int[] nums, int start, int end) {
-        
+    private int majority(int[] nums, int start, int end) { 
         if (start == end) return nums[start];
                 
         int mid = start + (end - start) / 2;
