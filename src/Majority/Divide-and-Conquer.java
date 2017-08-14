@@ -13,6 +13,7 @@ public class Solution {
         
         if (a == b) return a;
         
+        // Find the majority element from a and b.
         int countA = 0;
         int countB = 0;
         for (int i = start; i <= end; i++) {
