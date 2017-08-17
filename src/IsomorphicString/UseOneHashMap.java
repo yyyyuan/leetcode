@@ -7,9 +7,8 @@ public class Solution {
         
         for (int i = 0; i < s1.length; i++) {
             if (!map.containsKey(s1[i])) {
-                if (reverseMap.containsKey(s2[i]) && reverseMap.get(s2[i]) != s1[i]) return false;    // Here it uses containsValue
-                map.put(s1[i], s2[i]);
-                reverseMap.put(s2[i], s1[i]);
+                if (map.containsValue(s2[i])) return false;
+                else map.put(s1[i], s2[i]);
             }
             else {
                 if (map.get(s1[i]) != s2[i]) return false;
