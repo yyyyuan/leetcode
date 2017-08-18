@@ -10,7 +10,6 @@ class Solution {
         }
         
         Stack<Integer> stack = new Stack<>();
-        int count = 0;
         int index = numCourses - 1;
         int[] result = new int[numCourses];
         
@@ -20,7 +19,6 @@ class Solution {
         
         while (!stack.isEmpty()) {
             int course = stack.pop();
-            count++;
             result[index] = course;
             index--;
             for (int i = 0; i < graph[course].size(); i++) {
