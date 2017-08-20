@@ -1,3 +1,4 @@
+// This is not effective but very straight forward.
 class Solution {
     public String shortestPalindrome(String s) {
         if (s.length() == 0) return "";
