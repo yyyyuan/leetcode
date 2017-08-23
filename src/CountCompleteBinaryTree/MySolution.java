@@ -22,11 +22,21 @@ class Solution {
     
     private int getLeft(TreeNode root) {
         if (root == null) return 0;
-        return getLeft(root.left) + 1;
+        int height = 0;
+        while (root != null) {
+            height++;
+            root = root.left;
+        }
+        return height;
     }
     
     private int getRight(TreeNode root) {
         if (root == null) return 0;
-        return getRight(root.right) + 1;
+        int height = 0;
+        while (root != null) {
+            height++;
+            root = root.right;
+        }
+        return height;
     }
 }
