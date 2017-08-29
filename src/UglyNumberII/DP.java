@@ -8,8 +8,7 @@ class Solution {
             if (min == k[index2] * 2) index2++;
             if (min == k[index3] * 3) index3++;
             if (min == k[index5] * 5) index5++;
-            if (min <= k[i - 1]) i--;
-            else k[i] = min;
+            k[i] = min;
         }
         return k[n - 1];
     }
