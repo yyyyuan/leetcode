@@ -10,6 +10,6 @@ class Solution {
             else start = mid + 1;
         }
         return n - start;
-        // return n - (end + 1);  This can also word, it has the same meaning as n - start.
+        // return n - (end + 1);  This can also work, it has the same meaning as n - start.
     }
 }
