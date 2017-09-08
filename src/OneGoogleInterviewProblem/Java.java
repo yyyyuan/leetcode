@@ -10,7 +10,7 @@ class Main {
     
     private static HashSet<Integer> helper(int[] nums, HashSet<Integer> set, int n) {
         HashSet<Integer> result = new HashSet<>();
-        HashSet<Integer> temp = set;
+        HashSet<Integer> temp = new HashSet(set);      // Copy the set
         
         if (n == 1) {
             for (int num : nums) {
@@ -22,7 +22,7 @@ class Main {
         }
 
         for (int i = 1; i < n; i++) {
-            set = temp;
+            set = new HashSet(temp);        // Copy the set
             HashSet<Integer> h1 = helper(nums, set, i);
             HashSet<Integer> h2 = helper(nums, set, n - i);
             
