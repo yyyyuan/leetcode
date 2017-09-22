@@ -19,6 +19,7 @@ class Solution {
     
     private int longestPath(int[][] matrix, int[][] dp, int i, int j) {
 //        if (i < 0 || j < 0 || i >= matrix.length || j >= matrix[0].length) return 0;
+        if (dp[i][j] != 0) return dp[i][j];         // This is using the idea of cache.
         
         int length = 1;
                 
